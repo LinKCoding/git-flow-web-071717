@@ -94,14 +94,14 @@ describe "GIT" do
 
   it "13. From the add-img branch, what command do you run to fetch and merge all the
       changes from the add-img branch on the remote 'origin'?" do
-    answer = "git pull add-img"
+    answer = "git pull origin add-img"
     encoded_answer = "96887ba3f8740e85c07e4ee6bebba55ad8c779d0"
     expect(encode(answer)).to eq(encoded_answer)
   end
 
   it "14. From the add-img branch, what command do you run to pull down all the changes
       from the add-img branch on the remote 'upstream'?" do
-    answer = "?"
+    answer = "git pull upstream add-img"
     encoded_answer = "6c3209e77d80f4f76e692f6b7a9fb9be17068e3e"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -231,14 +231,14 @@ describe "GIT" do
 # describe "STATUS" do
   it "30. If index.html is being tracked and you modify it, but don't stage this change,
       what color will it be if you run 'git status'?" do
-    answer = "white"
+    answer = "red"
     encoded_answer = "78988010b890ce6f4d2136481f392787ec6d6106"
     expect(encode(answer)).to eq(encoded_answer)
   end
 
   it "31. If index.html is being tracked and you modify and stage the change,
       what color will it be if you run 'git status'?" do
-    answer = "?"
+    answer = "green"
     encoded_answer = "bc74f4f071a5a33f00ab88a6d6385b5e6638b86c"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -247,7 +247,7 @@ describe "GIT" do
      assuming no one has pushed to your remote since you cloned it, will 'git status' say
      you're ahead or behind origin/master?" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "?"
+    answer = "ahead"
     encoded_answer = "a7481340412e5d73e6c5c8de4ef9285b85502d5a"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -256,7 +256,7 @@ describe "GIT" do
       someone else pushes two commits to it, will 'git status' say you are ahead or
       behind when you run it at 12:05pm" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "?"
+    answer = "behind"
     encoded_answer = "fb6dbd81382d78f0f0633759a9c6033858e445b5"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -265,7 +265,7 @@ describe "GIT" do
      and one developer has pushed to your remote since you cloned it,
      will 'git status' say you're ahead or behind (or both) origin/master?" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "?"
+    answer = "ahead and behind"
     encoded_answer = "d81d22fb57ad5589d12d6363f4160b33232c3510"
     expect(encode(answer)).to eq(encoded_answer)
   end
